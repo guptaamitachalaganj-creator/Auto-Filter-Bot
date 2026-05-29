@@ -15,17 +15,17 @@ def is_enabled(value, default):
 
 SESSION = environ.get('SESSION', 'techifybots')
 API_ID = int(environ.get('API_ID', '33120802'))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+API_HASH = environ.get('API_HASH', '7532381d996b74438093e936a2b2d9a4')
+BOT_TOKEN = environ.get('BOT_TOKEN', "8612382865:AAFCGfBYmEtpPJONatwUHUJ0ocn5Os5CCv0")
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 INDEX_CAPTION = bool(environ.get('INDEX_CAPTION', False))
 COVER = bool(environ.get('COVER', False))
 PICS = (environ.get('PICS', 'https://i.ibb.co/PzZNZHF6/IMG-20251116-113905-254.jpg https://i.ibb.co/8npWSZ5T/pic.jpg')).split()
 MELCOW_PHOTO = environ.get("MELCOW_PHOTO", "https://i.ibb.co/2769f1rF/photo-2025-09-03-14-48-34-7548400762112442372.jpg")
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1255023013').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6010597476').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', ''))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003876845381'))
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1003681029083'))
 PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', ''))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '').split()]
 AUTH_CHANNELS = [int(ch) for ch in environ.get("AUTH_CHANNELS", "").split() if ch and id_pattern.match(ch)]
@@ -33,12 +33,12 @@ AUTH_REQ_CHANNELS = [int(ch) for ch in environ.get("AUTH_REQ_CHANNELS", "").spli
 REQST_CHANNEL = int(ch) if (ch := environ.get("REQST_CHANNEL", "")) and id_pattern.search(ch) else None
 SUPPORT_CHAT_ID = int(ch) if (ch := environ.get("SUPPORT_CHAT_ID", "")) and id_pattern.search(ch) else None
 
-OWNER = int(os.environ.get("OWNER", "1255023013"))
-CHANNEL_LINK = environ.get('CHANNEL_LINK', 'https://telegram.me/Techifybots')
-GROUP_LINK = environ.get('GROUP_LINK', 'https://telegram.me/TechifySupport')
+OWNER = int(os.environ.get("OWNER", "6010597476"))
+CHANNEL_LINK = environ.get('CHANNEL_LINK', 'https://t.me/+3C5CRrYiA3MxMjc1')
+GROUP_LINK = environ.get('GROUP_LINK', 'https://t.me/+3C5CRrYiA3MxMjc1')
 
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "filter")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Yash0000:Yash0000@cluster0.isif4pk.mongodb.net/?appName=Cluster0")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Yash0000")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'files')
 MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "False"), False)
 DATABASE_URI2 = environ.get('DATABASE_URI2', "")
